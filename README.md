@@ -4,7 +4,7 @@ The company that I desire to work for primarily programs in the Pick/BASIC progr
 
 The program is a Pokemon Type Selector/Randomizer. Using the Pokedex from the original Pokemon games, this program will allow the user to select up to two types that can be random, and the program will take those types and display all pokemon from the original Pokemon game and save them to a file.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/ncEf_YcP6Hc)
 
 # Development Environment
 
