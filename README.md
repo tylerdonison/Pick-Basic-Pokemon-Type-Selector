@@ -14,7 +14,7 @@ The program is a Pokemon Type Selector/Randomizer. Using the Pokedex from the or
 # Useful Websites
 
 * [Jonathan E. Sisk's Pick/BASIC guide](https://secure28.securewebsession.com/jes.com/pb/)
-* [Wikipedia on Pick/Basic](https://en.wikipedia.org/wiki/Pick_operating_system)
+* [Wikipedia on Pick/BASIC](https://en.wikipedia.org/wiki/Pick_operating_system)
 
 # Future Work
 
