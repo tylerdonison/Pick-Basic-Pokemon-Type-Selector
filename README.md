@@ -20,4 +20,4 @@ The program is a Pokemon Type Selector/Randomizer. Using the Pokedex from the or
 
 * Allow the user to select different Pokedexes
 * Allow the user to select the national Pokedex
-* Allow the user to select a version do not include Pokemon that are not in said version.
+* Allow the user to select a version and do not include Pokemon that are not in said version.
