@@ -1,6 +1,6 @@
 # Overview
 
-For Northwest Consulting, the company that I will work for, their primary programming language is Pick/BASIC. This language is an older programming language designed in the 1970s. The purpose of this program was to take the basics of Pick/BASIC and to "translate" a program that I had previously written in Python into Pick/BASIC.
+The company that I desire to work for programs primarily in the programming language of Pick/BASIC. This language is an older programming language designed in the 1970s. The purpose of this program was to take the basics of Pick/BASIC and to "translate" a program that I had previously written in Python into Pick/BASIC.
 
 The program is a Pokemon Type Selector/Randomizer. Using the Pokedex from the original Pokemon games, this program will allow the user to select up to two types that can be random, and the program will take those types and display all pokemon from the original Pokemon game and save them to a file.
 
