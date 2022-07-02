@@ -1,0 +1,97 @@
+* AUTHOR: Northwest Consulting Service, Inc.
+* Program POKEMON_TYPE_RANDOMIZER VERSION 1.0 DATE: 06/24/2022 
+* Project # 1 
+*
+* (c) Copyright 1995-2011 Northwest Consulting Service, Inc.
+* All rights reserved. This is unpublished proprietary source
+* code of Northwest Consulting Service, Inc.
+* The copyright notice above does not evidence any actual or intended
+* publication of such source code.
+*
+* Maintenance log - Insert most recent change description at top
+*
+* Date     Proj# Who Description.......................................
+*
+*
+* Program Description:
+*
+* Important variables for this program are: 
+* AGENT      - File variable for open of AGENCY file
+*
+PROMPT ''
+UDUMY=@(0) ;* NEEDED BY UNIVERSE
+*
+OPEN 'AGENCY' TO AGENT ELSE CALL NO.FILE ('','AGENCY',0)
+OPEN 'DICT','SECURITY' TO DSEC ELSE CALL NO.FILE ('','DICT SECURITY',0)
+OPEN 'CODES' TO CODES ELSE CALL NO.FILE ('','CODES',0)
+*
+CALL OPERATING.RELEASE (0,AGENT,OP.REL)
+CALL COLORSUB (COLORS,'')
+CALL WHO.CUBS ('',WHO,OP.REL)
+*
+PORT=FIELD(WHO,' ',1)
+IF PORT < 10 THEN XPORT=PORT'R%2' ELSE XPORT=PORT
+READV EMP.INIT FROM DSEC,XPORT,2 ELSE EMP.INIT=''
+PCLR=COLORS<1>
+TODAY=DATE()
+*
+READ TYPE.TABLE FROM CODES,'PTYPES' ELSE
+  PRINT;PRINT "PTYPES DOESN'T EXIST":;INPUT OKANS
+*: ->CONCATONATES, ;-> COMBINESFUNCTIONS
+  STOP
+END
+***NEED A READ FOR THE POKEDEX
+*READ POKEDEX FROM CODES,'PDEX' ELSE
+*  PRINT;PRINT "PDEX DOESN'T EXIST":;INPUT OKANS
+*
+LOCATE("!@#$%",TYPE.TABLE;TT.CNT) ELSE TT.CNT = TT.CNT-1
+T.DISPLAY.LINES = TT.CNT/3
+*
+10 PRINT PCLR
+PRINT "WELCOME TO TYLER'S POKEMON BY TYPE SELECTOR!"
+PRINT "PLEASE SELECT A TYPE:"
+FOR I = 1 TO T.DISPLAY.LINES
+  J = (I-1)*3 + 1
+  J.2 = J+1
+  J.3 = J+2
+  PLINE=J'R%2':"-":TYPE.TABLE<J>'L#10'
+  PLINE=PLINE:J.2'R%2':"-":TYPE.TABLE<J.2>'L#10'
+  PLINE=PLINE:J.3'R%2':"-":TYPE.TABLE<J.3>'L#10'
+  PRINT PLINE
+NEXT I
+*PRINT TT.CNT+1:"-Random"
+*
+INPUT USER.T1
+*IF RANDOM, CHOOSE RANDOM TYPE FROM LIST (IF DOABLE)
+* RND(10) + 1 generates a random number between 1 and 10
+*
+PRINT "PLEASE SELECT A SECOND TYPE, OR ENTER 'NONE':"
+FOR I = 1 TO T.DISPLAY.LINES
+  PLINE=J'R%2':"-":TYPE.TABLE<J>'L#10'
+  PLINE=PLINE:J.2'R%2':"-":TYPE.TABLE<J.2>'L#10'
+  PLINE=PLINE:J.3'R%2':"-":TYPE.TABLE<J.3>'L#10'
+  PRINT PLINE
+NEXT I
+*PRINT TT.CNT+1:"-Random"
+*
+INPUT USER.T2
+*IF RANDOM, CHOOSE RANDOM TYPE FROM LIST (IF DOABLE)
+*
+***SEARCH POKEDEX
+**FOR USER.T1:
+*LOCATE(USER.T1, [PDEX])
+*LOCATE(USER.T2, [PDEX])
+*PCNT = 0
+*FOR LINE IN PDEX:
+*  POKE.NAME = PDEX<2>  
+*  POKE.TYPE1 = PDEX<3>
+*  POKE.TYPE2 = PDEX<4>
+*
+*  IF TYPE.1 == USER.T1 OR TYPE.2 == USER.T1 OR TYPE.1 == USER.T2 OR TYPE.2 == USER.T2
+*    PCNT = PCNT + 1
+*    PLINE = PCNT'R%2':"-":POKE.NAME'L#12':POKE.TYPE1'L#10':POKE.TYPE2
+*    PRINT PLINE
+*    WRITE PLINE INTO A FILE
+*
+
+
